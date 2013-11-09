@@ -1,33 +1,32 @@
 ******************************************************************************
                   TI ARM Linker PC v5.0.4                      
 ******************************************************************************
->> Linked Fri Nov 08 18:45:59 2013
+>> Linked Fri Nov 08 19:15:05 2013
 
 OUTPUT FILE NAME:   <test1.out>
-ENTRY POINT SYMBOL: "_c_int00"  address: 00000565
+ENTRY POINT SYMBOL: "_c_int00"  address: 00000541
 
 
 MEMORY CONFIGURATION
 
          name            origin    length      used     unused   attr    fill
 ----------------------  --------  ---------  --------  --------  ----  --------
-  FLASH                 00000000   00040000  000008be  0003f742  R  X
-  SRAM                  20000000   00008000  00000215  00007deb  RW X
+  FLASH                 00000000   00040000  00000870  0003f790  R  X
+  SRAM                  20000000   00008000  00000214  00007dec  RW X
 
 
 SEGMENT ALLOCATION MAP
 
 run origin  load origin   length   init length attrs members
 ----------  ----------- ---------- ----------- ----- -------
-00000000    00000000    000008c0   000008c0    r-x
-  00000000    00000000    0000078a   0000078a    r-x .text
-  0000078c    0000078c    000000fc   000000fc    r-- .const
-  00000888    00000888    00000038   00000038    r-- .cinit
+00000000    00000000    00000870   00000870    r-x
+  00000000    00000000    00000754   00000754    r-x .text
+  00000754    00000754    000000fc   000000fc    r-- .const
+  00000850    00000850    00000020   00000020    r-- .cinit
 20000000    20000000    00000200   00000000    rw-
   20000000    20000000    00000200   00000000    rw- .stack
-20000200    20000200    00000015   00000014    rw-
+20000200    20000200    00000014   00000014    rw-
   20000200    20000200    00000014   00000014    rw- .data
-  20000214    20000214    00000001   00000000    rw- .bss
 
 
 SECTION ALLOCATION MAP
@@ -35,50 +34,47 @@ SECTION ALLOCATION MAP
  output                                  attributes/
 section   page    origin      length       input sections
 --------  ----  ----------  ----------   ----------------
-.text      0    00000000    0000078a     
+.text      0    00000000    00000754     
                   00000000    00000130     driverlib.lib : gpio.obj (.text:GPIOPadConfigSet)
                   00000130    00000104                   : sysctl.obj (.text:SysCtlClockSet)
                   00000234    000000c8                   : sysctl.obj (.text:SysCtlClockGet)
                   000002fc    0000009c     rtsv7M4_T_le_v4SPD16_eabi.lib : memcpy_t2.obj (.text)
                   00000398    00000094                                   : auto_init.obj (.text)
-                  0000042c    00000090     main.obj (.text)
-                  000004bc    0000005e     rtsv7M4_T_le_v4SPD16_eabi.lib : copy_decompress_rle.obj (.text)
-                  0000051a    00000002     --HOLE-- [fill = 0]
-                  0000051c    00000048     driverlib.lib : gpio.obj (.text:GPIOPinConfigure)
-                  00000564    00000048     rtsv7M4_T_le_v4SPD16_eabi.lib : boot.obj (.text)
-                  000005ac    00000044                                   : cpy_tbl.obj (.text)
-                  000005f0    00000040     driverlib.lib : uart.obj (.text:UARTConfigSetExpClk)
-                  00000630    00000040     rtsv7M4_T_le_v4SPD16_eabi.lib : exit.obj (.text)
-                  00000670    00000034     driverlib.lib : sysctl.obj (.text:SysCtlPeripheralEnable)
-                  000006a4    0000002a                   : gpio.obj (.text:GPIODirModeSet)
-                  000006ce    00000002     --HOLE-- [fill = 0]
-                  000006d0    0000001c                   : uart.obj (.text:UARTDisable)
-                  000006ec    00000018     rtsv7M4_T_le_v4SPD16_eabi.lib : args_main.obj (.text)
-                  00000704    00000014     driverlib.lib : uart.obj (.text:UARTEnable)
-                  00000718    00000014     rtsv7M4_T_le_v4SPD16_eabi.lib : _lock.obj (.text)
-                  0000072c    00000012     driverlib.lib : gpio.obj (.text:GPIOPinTypeUART)
-                  0000073e    00000012     rtsv7M4_T_le_v4SPD16_eabi.lib : copy_zero_init.obj (.text:decompress:ZI)
-                  00000750    0000000e                                   : copy_decompress_none.obj (.text:decompress:none)
-                  0000075e    0000000c     driverlib.lib : uart.obj (.text:UARTCharsAvail)
-                  0000076a    0000000a                   : uart.obj (.text:UARTCharGet)
-                  00000774    0000000a                   : uart.obj (.text:UARTCharPut)
-                  0000077e    00000006                   : sysctl.obj (.text:SysCtlDelay)
-                  00000784    00000006     rtsv7M4_T_le_v4SPD16_eabi.lib : copy_decompress_rle.obj (.text:decompress:rle24)
+                  0000042c    0000006c     main.obj (.text)
+                  00000498    0000005e     rtsv7M4_T_le_v4SPD16_eabi.lib : copy_decompress_rle.obj (.text)
+                  000004f6    00000002     --HOLE-- [fill = 0]
+                  000004f8    00000048     driverlib.lib : gpio.obj (.text:GPIOPinConfigure)
+                  00000540    00000048     rtsv7M4_T_le_v4SPD16_eabi.lib : boot.obj (.text)
+                  00000588    00000044                                   : cpy_tbl.obj (.text)
+                  000005cc    00000040     driverlib.lib : uart.obj (.text:UARTConfigSetExpClk)
+                  0000060c    00000040     rtsv7M4_T_le_v4SPD16_eabi.lib : exit.obj (.text)
+                  0000064c    00000034     driverlib.lib : sysctl.obj (.text:SysCtlPeripheralEnable)
+                  00000680    0000002a                   : gpio.obj (.text:GPIODirModeSet)
+                  000006aa    00000002     --HOLE-- [fill = 0]
+                  000006ac    0000001c                   : uart.obj (.text:UARTDisable)
+                  000006c8    00000018     rtsv7M4_T_le_v4SPD16_eabi.lib : args_main.obj (.text)
+                  000006e0    00000014     driverlib.lib : uart.obj (.text:UARTEnable)
+                  000006f4    00000014     rtsv7M4_T_le_v4SPD16_eabi.lib : _lock.obj (.text)
+                  00000708    00000012     driverlib.lib : gpio.obj (.text:GPIOPinTypeUART)
+                  0000071a    0000000e     rtsv7M4_T_le_v4SPD16_eabi.lib : copy_decompress_none.obj (.text:decompress:none)
+                  00000728    0000000c     driverlib.lib : uart.obj (.text:UARTCharsAvail)
+                  00000734    0000000a                   : uart.obj (.text:UARTCharGet)
+                  0000073e    0000000a                   : uart.obj (.text:UARTCharPut)
+                  00000748    00000006                   : sysctl.obj (.text:SysCtlDelay)
+                  0000074e    00000006     rtsv7M4_T_le_v4SPD16_eabi.lib : copy_decompress_rle.obj (.text:decompress:rle24)
 
 .init_array 
 *          0    00000000    00000000     UNINITIALIZED
 
-.const     0    0000078c    000000fc     
-                  0000078c    00000090     driverlib.lib : gpio.obj (.const:g_pui32GPIOBaseAddrs)
-                  0000081c    0000006c                   : sysctl.obj (.const:g_pui32Xtals)
+.const     0    00000754    000000fc     
+                  00000754    00000090     driverlib.lib : gpio.obj (.const:g_pui32GPIOBaseAddrs)
+                  000007e4    0000006c                   : sysctl.obj (.const:g_pui32Xtals)
 
-.cinit     0    00000888    00000038     
-                  00000888    0000000f     (.cinit..data.load) [load image, compression = rle]
-                  00000897    00000001     --HOLE-- [fill = 0]
-                  00000898    0000000c     (__TI_handler_table)
-                  000008a4    00000004     --HOLE-- [fill = 0]
-                  000008a8    00000008     (.cinit..bss.load) [load image, compression = zero_init]
-                  000008b0    00000010     (__TI_cinit_table)
+.cinit     0    00000850    00000020     
+                  00000850    0000000f     (.cinit..data.load) [load image, compression = rle]
+                  0000085f    00000001     --HOLE-- [fill = 0]
+                  00000860    00000008     (__TI_handler_table)
+                  00000868    00000008     (__TI_cinit_table)
 
 .stack     0    20000000    00000200     UNINITIALIZED
                   20000000    00000200     --HOLE--
@@ -88,83 +84,75 @@ section   page    origin      length       input sections
                   20000208    00000008                                   : exit.obj (.data)
                   20000210    00000004                                   : stkdepth_vars.obj (.data)
 
-.bss       0    20000214    00000001     UNINITIALIZED
-                  20000214    00000001     main.obj (.bss)
-
 
 LINKER GENERATED COPY TABLES
 
-__TI_cinit_table @ 000008b0 records: 2, size/record: 8, table size: 16
-	.data: load addr=00000888, load size=0000000f bytes, run addr=20000200, run size=00000014 bytes, compression=rle
-	.bss: load addr=000008a8, load size=00000008 bytes, run addr=20000214, run size=00000001 bytes, compression=zero_init
+__TI_cinit_table @ 00000868 records: 1, size/record: 8, table size: 8
+	.data: load addr=00000850, load size=0000000f bytes, run addr=20000200, run size=00000014 bytes, compression=rle
 
 
 LINKER GENERATED HANDLER TABLE
 
-__TI_handler_table @ 00000898 records: 3, size/record: 4, table size: 12
+__TI_handler_table @ 00000860 records: 2, size/record: 4, table size: 8
 	index: 0, handler: __TI_decompress_rle24
 	index: 1, handler: __TI_decompress_none
-	index: 2, handler: __TI_zero_init
 
 
 GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
 
 address    name
 --------   ----
-00000631   C$$EXIT
-000006a5   GPIODirModeSet
+0000060d   C$$EXIT
+00000681   GPIODirModeSet
 00000001   GPIOPadConfigSet
-0000051d   GPIOPinConfigure
-0000072d   GPIOPinTypeUART
+000004f9   GPIOPinConfigure
+00000709   GPIOPinTypeUART
 UNDEFED    SHT$$INIT_ARRAY$$Base
 UNDEFED    SHT$$INIT_ARRAY$$Limit
 00000235   SysCtlClockGet
 00000131   SysCtlClockSet
-0000077f   SysCtlDelay
-00000671   SysCtlPeripheralEnable
-0000076b   UARTCharGet
-00000775   UARTCharPut
-0000075f   UARTCharsAvail
-000005f1   UARTConfigSetExpClk
-000006d1   UARTDisable
-00000705   UARTEnable
+00000749   SysCtlDelay
+0000064d   SysCtlPeripheralEnable
+00000735   UARTCharGet
+0000073f   UARTCharPut
+00000729   UARTCharsAvail
+000005cd   UARTConfigSetExpClk
+000006ad   UARTDisable
+000006e1   UARTEnable
 20000200   __STACK_END
 00000200   __STACK_SIZE
 20000200   __STACK_TOP
-000008b0   __TI_CINIT_Base
-000008c0   __TI_CINIT_Limit
-00000898   __TI_Handler_Table_Base
-000008a4   __TI_Handler_Table_Limit
+00000868   __TI_CINIT_Base
+00000870   __TI_CINIT_Limit
+00000860   __TI_Handler_Table_Base
+00000868   __TI_Handler_Table_Limit
 00000001   __TI_args_main
 00000399   __TI_auto_init
-00000751   __TI_decompress_none
-00000785   __TI_decompress_rle24
+0000071b   __TI_decompress_none
+0000074f   __TI_decompress_rle24
 00000000   __TI_static_base__
-0000073f   __TI_zero_init
 000002fd   __aeabi_memcpy
 000002fd   __aeabi_memcpy4
 000002fd   __aeabi_memcpy8
 ffffffff   __binit__
 ffffffff   __c_args__
 20000000   __stack
-000006ed   _args_main
-00000565   _c_int00
+000006c9   _args_main
+00000541   _c_int00
 20000208   _cleanup_ptr
 2000020c   _dtors_ptr
 20000200   _lock
-00000727   _nop
-0000071f   _register_lock
-00000719   _register_unlock
+00000703   _nop
+000006fb   _register_lock
+000006f5   _register_unlock
 20000204   _unlock
-00000635   abort
+00000611   abort
 ffffffff   binit
-000005ad   copy_in
-0000063d   exit
-0000044d   main
+00000589   copy_in
+00000619   exit
+0000042d   main
 20000210   main_func_sp
 000002fd   memcpy
-0000042d   usbStringPut
-20000214   x
 
 
 GLOBAL SYMBOLS: SORTED BY Symbol Address 
@@ -182,35 +170,33 @@ address    name
 000002fd   __aeabi_memcpy8
 000002fd   memcpy
 00000399   __TI_auto_init
-0000042d   usbStringPut
-0000044d   main
-0000051d   GPIOPinConfigure
-00000565   _c_int00
-000005ad   copy_in
-000005f1   UARTConfigSetExpClk
-00000631   C$$EXIT
-00000635   abort
-0000063d   exit
-00000671   SysCtlPeripheralEnable
-000006a5   GPIODirModeSet
-000006d1   UARTDisable
-000006ed   _args_main
-00000705   UARTEnable
-00000719   _register_unlock
-0000071f   _register_lock
-00000727   _nop
-0000072d   GPIOPinTypeUART
-0000073f   __TI_zero_init
-00000751   __TI_decompress_none
-0000075f   UARTCharsAvail
-0000076b   UARTCharGet
-00000775   UARTCharPut
-0000077f   SysCtlDelay
-00000785   __TI_decompress_rle24
-00000898   __TI_Handler_Table_Base
-000008a4   __TI_Handler_Table_Limit
-000008b0   __TI_CINIT_Base
-000008c0   __TI_CINIT_Limit
+0000042d   main
+000004f9   GPIOPinConfigure
+00000541   _c_int00
+00000589   copy_in
+000005cd   UARTConfigSetExpClk
+0000060d   C$$EXIT
+00000611   abort
+00000619   exit
+0000064d   SysCtlPeripheralEnable
+00000681   GPIODirModeSet
+000006ad   UARTDisable
+000006c9   _args_main
+000006e1   UARTEnable
+000006f5   _register_unlock
+000006fb   _register_lock
+00000703   _nop
+00000709   GPIOPinTypeUART
+0000071b   __TI_decompress_none
+00000729   UARTCharsAvail
+00000735   UARTCharGet
+0000073f   UARTCharPut
+00000749   SysCtlDelay
+0000074f   __TI_decompress_rle24
+00000860   __TI_Handler_Table_Base
+00000868   __TI_CINIT_Base
+00000868   __TI_Handler_Table_Limit
+00000870   __TI_CINIT_Limit
 20000000   __stack
 20000200   __STACK_END
 20000200   __STACK_TOP
@@ -219,11 +205,10 @@ address    name
 20000208   _cleanup_ptr
 2000020c   _dtors_ptr
 20000210   main_func_sp
-20000214   x
 ffffffff   __binit__
 ffffffff   __c_args__
 ffffffff   binit
 UNDEFED    SHT$$INIT_ARRAY$$Base
 UNDEFED    SHT$$INIT_ARRAY$$Limit
 
-[54 symbols]
+[51 symbols]
