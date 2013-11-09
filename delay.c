@@ -1,8 +1,7 @@
 /*
  * delay.c
  *
- *  Created on: Nov 8, 2013
- *      Author: cmcain
+ Used SysCtlDelay
  */
 
 
