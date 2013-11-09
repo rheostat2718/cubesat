@@ -1,0 +1,1 @@
+"./usbUART.obj" "./ritual.obj" "./main.obj" "./delay.obj" -l"libc.a" "../driverlib.lib" "../tm4c123gh6pm.cmd" 
