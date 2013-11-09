@@ -6,7 +6,7 @@
  */
 
 
-// call ALL init functions
+
 void ritual( void)
 {
 
